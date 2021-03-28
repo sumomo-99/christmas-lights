@@ -1,0 +1,16 @@
+.light {
+  animation: lighting 2s ease 0s infinite alternate none running;
+}
+
+.dark {
+  filter:brightness(0);
+}
+
+@keyframes lighting {
+  0% {
+    filter: brightness(0.1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
