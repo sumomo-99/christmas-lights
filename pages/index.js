@@ -19,7 +19,13 @@ export default function Home() {
     let coloredLights = []
 
     for (const color of colors) {
-      coloredLights.push(<Light key={color} color={color} active={active} />)
+      coloredLights.push(
+        <Light 
+          key={color} 
+          color={color} 
+          active={active}
+          interval={interval}
+        />)
     }
     return coloredLights
   }
@@ -49,13 +55,13 @@ export default function Home() {
 
       <Container textAlign="center">
         <Form className={styles.form}>
-          {/* <Form.Input
+          <Form.Input
             label="Interval"
             type="range"
             min="1"
             max="10"
             value={interval}
-            onChange={e => setInterval(e.target.value)} /> */}
+            onChange={e => setInterval(e.target.value)} />
           <Form.Button
             toggle 
             active={active} 
