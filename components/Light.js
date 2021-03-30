@@ -3,16 +3,17 @@ import {
 } from 'semantic-ui-react'
 import styles from '../styles/Light.module.css'
 
-export default function Light({color, active, interval}) {
-  const style = active ? styles.light : styles.dark
+export default function Light(props) {
+  const style = props.active ? styles.light : styles.dark
 
   return (
     <Icon 
       className={style}
-      style={{animationDuration: `${interval}s`}}
+      style={{animationDuration: `${props.interval}s`,
+              animationDelay: `${Math.floor(Math.random()*Math.floor(props.interval))}s`}}
       size="massive" 
       name="lightbulb" 
       flipped="vertically" 
-      color={color} />
+      color={props.color} />
   )
 }

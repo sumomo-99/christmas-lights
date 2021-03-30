@@ -59,7 +59,7 @@ export default function Home() {
             label="Interval"
             type="range"
             min="1"
-            max="10"
+            max="5"
             value={interval}
             onChange={e => setInterval(e.target.value)} />
           <Form.Button
